@@ -1,6 +1,7 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
+  config.main_app_name = ["C3 Church Bay Area", "Admin and CMS"]
 
   ## == Devise ==
   # config.authenticate_with do
@@ -37,5 +38,42 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+
+    #Campus Quick Ref Definitions
+    m = 'C3 Bay area'
+    t = 'Treasure Island Campus'
+    g = 'Green Valley Campus'
+    s = 'SOMA Campus'
+
+    #C3 Bay Area General
+    config.model MainOrbit do
+      label 'Main Orbit'
+      navigation_label m
+      weight 1
+    end
+
+    #TI Specific
+    config.model TiSpecificOrbit do
+      label 'TI Specific Orbit'
+      navigation_label t
+      weight 2
+    end
+
+
+    #GV Specific
+    config.model GvSpecificOrbit do
+      label 'GV Specific Orbit'
+      navigation_label g
+      weight 3
+    end
+
+
+    #SOMA Specific
+    config.model SomaSpecificOrbit do
+      label 'SOMA Specific Orbit'
+      navigation_label s
+      weight 4
+    end
+
   end
 end

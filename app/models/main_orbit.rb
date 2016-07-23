@@ -1,0 +1,2 @@
+class MainOrbit < ApplicationRecord
+end

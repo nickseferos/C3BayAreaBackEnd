@@ -1,0 +1,2 @@
+class GvSpecificOrbit < ApplicationRecord
+end

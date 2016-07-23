@@ -1,0 +1,2 @@
+class TiSpecificOrbit < ApplicationRecord
+end
