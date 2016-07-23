@@ -1,0 +1,2 @@
+class TiPodcast < ApplicationRecord
+end

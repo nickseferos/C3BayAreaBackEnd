@@ -59,6 +59,12 @@ RailsAdmin.config do |config|
       weight 2
     end
 
+    config.model TiPodcast do
+      label 'TI Podcast'
+      navigation_label t
+      weight 2
+    end
+
 
     #GV Specific
     config.model GvSpecificOrbit do
@@ -67,10 +73,22 @@ RailsAdmin.config do |config|
       weight 3
     end
 
+    config.model GvPodcast do
+      label 'GV Podcast'
+      navigation_label g
+      weight 3
+    end
+
 
     #SOMA Specific
     config.model SomaSpecificOrbit do
       label 'SOMA Specific Orbit'
+      navigation_label s
+      weight 4
+    end
+
+    config.model SomaPodcast do
+      label 'SOMA Podcast'
       navigation_label s
       weight 4
     end

@@ -1,0 +1,2 @@
+class GvPodcast < ApplicationRecord
+end

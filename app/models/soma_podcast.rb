@@ -1,0 +1,2 @@
+class SomaPodcast < ApplicationRecord
+end
