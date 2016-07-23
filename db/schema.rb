@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160723221341) do
   enable_extension "plpgsql"
 
   create_table "gv_podcasts", force: :cascade do |t|
-    t.binary   "media"
+    t.string   "media"
     t.string   "title"
     t.string   "speaker"
     t.string   "series"
@@ -27,21 +27,21 @@ ActiveRecord::Schema.define(version: 20160723221341) do
   end
 
   create_table "gv_specific_orbits", force: :cascade do |t|
-    t.binary   "image"
+    t.string   "image"
     t.string   "alt_description"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
   create_table "main_orbits", force: :cascade do |t|
-    t.binary   "image"
+    t.string   "image"
     t.string   "alt_description"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
   create_table "soma_podcasts", force: :cascade do |t|
-    t.binary   "media"
+    t.string   "media"
     t.string   "title"
     t.string   "speaker"
     t.string   "series"
@@ -52,14 +52,14 @@ ActiveRecord::Schema.define(version: 20160723221341) do
   end
 
   create_table "soma_specific_orbits", force: :cascade do |t|
-    t.binary   "image"
+    t.string   "image"
     t.string   "alt_description"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
   create_table "ti_podcasts", force: :cascade do |t|
-    t.binary   "media"
+    t.string   "media"
     t.string   "title"
     t.string   "speaker"
     t.string   "series"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20160723221341) do
   end
 
   create_table "ti_specific_orbits", force: :cascade do |t|
-    t.binary   "image"
+    t.string   "image"
     t.string   "alt_description"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

@@ -1,7 +1,7 @@
 class CreateTiPodcasts < ActiveRecord::Migration[5.0]
   def change
     create_table :ti_podcasts do |t|
-      t.binary :media
+      t.string :media
       t.string :title
       t.string :speaker
       t.string :series
