@@ -4,16 +4,13 @@ RailsAdmin.config do |config|
   config.main_app_name = ["C3 Church Bay Area", "Admin and CMS"]
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+    warden.authenticate! scope: :admin
+  end
+  config.current_user_method(&:current_admin)
 
   ## == Cancan ==
   # config.authorize_with :cancan
-
-  ## == Pundit ==
-  # config.authorize_with :pundit
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
@@ -55,6 +52,12 @@ RailsAdmin.config do |config|
           label 'Alternate Description'
         end
       end
+    end
+
+    config.model Admin do
+      label 'Admin Users'
+      navigation_label m
+      weight 1
     end
 
     #TI Specific

@@ -32,6 +32,7 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'carrierwave'
 gem 'devise'
+gem "cancancan"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
