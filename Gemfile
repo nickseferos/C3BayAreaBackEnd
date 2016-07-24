@@ -31,6 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'carrierwave'
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

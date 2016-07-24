@@ -33,7 +33,6 @@ RailsAdmin.config do |config|
     show
     edit
     delete
-    show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
@@ -50,6 +49,12 @@ RailsAdmin.config do |config|
       label 'Main Orbit'
       navigation_label m
       weight 1
+      edit do
+        field :image, :carrierwave
+        field :alt_description do
+          label 'Alternate Description'
+        end
+      end
     end
 
     #TI Specific
@@ -57,12 +62,26 @@ RailsAdmin.config do |config|
       label 'TI Specific Orbit'
       navigation_label t
       weight 2
+      edit do
+        field :image, :carrierwave
+        field :alt_description do
+          label 'Alternate Description'
+        end
+      end
     end
 
     config.model TiPodcast do
       label 'TI Podcast'
       navigation_label t
       weight 2
+      edit do
+        field :media, :carrierwave
+        field :title
+        field :speaker
+        field :series
+        field :date
+        field :description
+      end
     end
 
 
@@ -71,12 +90,26 @@ RailsAdmin.config do |config|
       label 'GV Specific Orbit'
       navigation_label g
       weight 3
+      edit do
+        field :image, :carrierwave
+        field :alt_description do
+          label 'Alternate Description'
+        end
+      end
     end
 
     config.model GvPodcast do
       label 'GV Podcast'
       navigation_label g
       weight 3
+      edit do
+        field :media, :carrierwave
+        field :title
+        field :speaker
+        field :series
+        field :date
+        field :description
+      end
     end
 
 
@@ -85,12 +118,26 @@ RailsAdmin.config do |config|
       label 'SOMA Specific Orbit'
       navigation_label s
       weight 4
+      edit do
+        field :image, :carrierwave
+        field :alt_description do
+          label 'Alternate Description'
+        end
+      end
     end
 
     config.model SomaPodcast do
       label 'SOMA Podcast'
       navigation_label s
       weight 4
+      edit do
+        field :media, :carrierwave
+        field :title
+        field :speaker
+        field :series
+        field :date
+        field :description
+      end
     end
 
   end
