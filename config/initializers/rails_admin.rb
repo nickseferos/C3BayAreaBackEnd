@@ -22,7 +22,9 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.actions do
-    dashboard                     # mandatory
+    dashboard do                  # mandatory
+      statistics false
+    end 
     index                         # mandatory
     new
     export
@@ -48,7 +50,7 @@ RailsAdmin.config do |config|
       weight 1
       edit do
         field :image, :carrierwave
-        field :alt_description do
+        field :alt_description, :froala do
           label 'Alternate Description'
         end
       end
@@ -60,6 +62,24 @@ RailsAdmin.config do |config|
       weight 1
     end
 
+    config.model Culture do
+      label 'C3 Culture'
+      navigation_label m
+      weight 1
+    end
+
+    config.model Belief do
+      label 'C3 Beliefs'
+      navigation_label m
+      weight 1
+    end
+
+    config.model Verse do
+      label 'Verse'
+      navigation_label m
+      weight 1
+    end
+
     #TI Specific
     config.model TiSpecificOrbit do
       label 'TI Specific Orbit'
@@ -67,7 +87,7 @@ RailsAdmin.config do |config|
       weight 2
       edit do
         field :image, :carrierwave
-        field :alt_description do
+        field :alt_description, :froala do
           label 'Alternate Description'
         end
       end
@@ -83,7 +103,7 @@ RailsAdmin.config do |config|
         field :speaker
         field :series
         field :date
-        field :description
+        field :description, :froala
       end
     end
 
@@ -95,7 +115,7 @@ RailsAdmin.config do |config|
       weight 3
       edit do
         field :image, :carrierwave
-        field :alt_description do
+        field :alt_description, :froala do
           label 'Alternate Description'
         end
       end
@@ -111,7 +131,7 @@ RailsAdmin.config do |config|
         field :speaker
         field :series
         field :date
-        field :description
+        field :description, :froala
       end
     end
 
@@ -123,7 +143,7 @@ RailsAdmin.config do |config|
       weight 4
       edit do
         field :image, :carrierwave
-        field :alt_description do
+        field :alt_description, :froala do
           label 'Alternate Description'
         end
       end
@@ -139,7 +159,7 @@ RailsAdmin.config do |config|
         field :speaker
         field :series
         field :date
-        field :description
+        field :description, :froala
       end
     end
 
