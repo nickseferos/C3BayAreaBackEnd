@@ -1,0 +1,2 @@
+class Belief < ApplicationRecord
+end
